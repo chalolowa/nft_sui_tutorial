@@ -1,10 +1,10 @@
 
 module nft_sui_tutorial::nft_sui_tutorial {
-    use sui::object::{UID};
-    use sui::tx_context::{TxContext};
+    use sui::object::UID;
+    use sui::tx_context::TxContext;
     use std::string::String;
 
-    struct NFT has key, store {
+    public struct NFT has key, store {
         id: UID,
         name: String,
         description: String,
@@ -24,6 +24,6 @@ module nft_sui_tutorial::nft_sui_tutorial {
 
     //function transfers nft to another address
     public entry fun transfer(nft:NFT, recipient:address) {
-        transfer::transfer(nft, recipient);
+        transfer::public_transfer(nft, recipient);
     }
 }
