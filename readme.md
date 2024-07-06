@@ -1,4 +1,4 @@
-# NFT Sui Tutorial
+# NFT Sui Tutorial :nerd_face:
 
 This Move module, `nft_sui_tutorial`, provides basic functionality for minting and transferring NFTs on the Sui blockchain. It includes definitions for an `NFT` struct and functions for minting and transferring these NFTs.
 
